@@ -12,12 +12,14 @@ Ta sẽ viết python function theo format sau:
 
 ```python
 """
-Đây là những thông số của công thức, khi ghi công thức, một số constant như hệ số nhiệt tạo ra bởi máy, ... có thể tìm trong sách thì mọi người nhớ note
-vào trực tiếp input_dict của mình nha. Để tiện khi chúng ta gáp công thức lại. Còn những thông số không tìm được trong sách hay số từ dữ liệu thật thì để dưới dạng 
-variable.
+Đây là những thông số của công thức, khi ghi công thức, một số constant như hệ số nhiệt tạo ra bởi máy, ...
+có thể tìm trong sách thì mọi người nhớ note vào trực tiếp input_dict của mình nha. Để tiện khi chúng ta
+gáp công thức lại. Còn những thông số không tìm được trong sách hay số từ dữ liệu thật thì để
+dưới dạng variable.
 
-Ở đây, ta có A,d, B đều là constant tìm được trong sách. Riêng c là variable. Trong quá trình lấy từ dữ liệu thật, ta thay variable_c = [dữ liệu thật]. Trong trường
-hợp ở đây thì dữ liệu thật của c là 1.2
+Ở đây, ta có A,d, B đều là constant tìm được trong sách. Riêng c là variable. 
+Trong quá trình lấy từ dữ liệu thật, ta thay variable_c = [dữ liệu thật].
+Trong trường hợp ở đây thì dữ liệu thật của c là 10
 """
 
 variable_c = 10
