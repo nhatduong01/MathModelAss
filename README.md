@@ -24,57 +24,41 @@ Trong trường hợp ở đây thì dữ liệu thật của c là 10
 
 variable_c = 10
 
-input_dict = {
-  "A": 5,
-  "c": variable_c,
-  "d": 1.2,
-  "B": 15
-}
+# Khi viết tuple giống như vầy thì mọi người nhớ chú thích thứ tự nha.
+# Ví dụ như: (A, c, d, B)
+input_tuple = (5, variable_c, 1.2, 15)
 
 # function body
-def mc_xy(my_dict):
-  A = my_dict["A"]
-  c = my_dict["c"]
-  d = my_dict["d"]
-  B = my_dict["B"]
+def mc_xy(my_tuple):
+  # Lúc extract ra thì theo đúng thứ tự mà extract thôi
+  A, c, d, B = my_tuple
   
   result = (A * c * d) / B
   return result
   
 # call function
 
-val_mc_xy = mc_xy(input_dict) #=> 4.0
+val_mc_xy = mc_xy(input_tuple) #=> 4.0
 ```
 
 ## Hàm python gọi hàm python khác
 Lấy ví dụ trên, trong trường hợp A không phải là số mà là một hàm phụ thuộc vào các biến x,y,z...
 
 ```python
-input_dict = {
-  "c": 10,
-  "d": 1.2,
-  "B": 15,
-  "x": 1.6,
-  "y": 2.5,
-  "z": -2
-}
+# order: (c, d, B, x, y, z)
+input_tuple = (10, 1.2, 15, 1.6, 2.5, -2)
 
-def funcA(my_dict):
-  x = my_dict["x"]
-  y = my_dict["y"]
-  z = my_dict["z"]
+def funcA(my_tuple):
+  x, y, z = my_tuple
   return x*y / z
   
-def mc_xy(my_dict):
-  A = funcA(my_dict)
-  c = my_dict["c"]
-  d = my_dict["d"]
-  B = my_dict["B"]
-  
+def mc_xy(my_tuple):
+  c, d, B, x, y, z = my_tuple
+  val_A = funcA((x,y,z))
   result = (val_A * c * d) / B
   return result 
   
-val_mc_xy = mc_xy(input_dict)
+val_mc_xy = mc_xy(input_tuple)
 ```
 
 # Cách commit lên github
